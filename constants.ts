@@ -188,7 +188,7 @@ export const EDUCATION = {
   period: "2021 – 2024"
 };
 
-export const SOCIAL_LINKS = [
-  { name: "LinkedIn", url: "https://linkedin.com/in/vvibrich", icon: "Linkedin" }, // Placeholder as url wasn't provided specifically, but structure is needed
-  { name: "GitHub", url: "https://github.com/vvibrich", icon: "Github" }
-];
+export const SOCIAL_LINKS = {
+  linkedin: "https://linkedin.com/in/vvibrich",
+  github: "https://github.com/vvibrich"
+};

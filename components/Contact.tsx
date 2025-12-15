@@ -1,5 +1,5 @@
 import React from 'react';
-import { PROFILE } from '../constants';
+import { PROFILE, SOCIAL_LINKS } from '../constants';
 import SectionHeading from './ui/SectionHeading';
 import { Github, Linkedin, Mail, MapPin } from 'lucide-react';
 
@@ -19,7 +19,7 @@ const Contact: React.FC = () => {
               <Mail className="w-6 h-6" />
               <span className="text-lg">{PROFILE.email}</span>
             </a>
-            
+
             <div className="flex items-center space-x-3 text-slate-300 bg-slate-950/50 px-6 py-4 rounded-xl border border-slate-700 w-full md:w-auto justify-center">
               <MapPin className="w-6 h-6 text-primary-500" />
               <span className="text-lg">{PROFILE.location}</span>
@@ -27,13 +27,13 @@ const Contact: React.FC = () => {
           </div>
 
           <div className="flex justify-center space-x-6">
-             {/* Using placeholders for social links as they weren't strictly provided, but are essential for a portfolio */}
-             <a href="#" className="p-3 bg-slate-800 rounded-full text-slate-400 hover:text-white hover:bg-primary-600 transition-all">
-                <Linkedin size={24} />
-             </a>
-             <a href="#" className="p-3 bg-slate-800 rounded-full text-slate-400 hover:text-white hover:bg-slate-700 transition-all">
-                <Github size={24} />
-             </a>
+            {/* Using placeholders for social links as they weren't strictly provided, but are essential for a portfolio */}
+            <a href={SOCIAL_LINKS.linkedin} className="p-3 bg-slate-800 rounded-full text-slate-400 hover:text-white hover:bg-primary-600 transition-all">
+              <Linkedin size={24} />
+            </a>
+            <a href={SOCIAL_LINKS.github} className="p-3 bg-slate-800 rounded-full text-slate-400 hover:text-white hover:bg-slate-700 transition-all">
+              <Github size={24} />
+            </a>
           </div>
         </div>
 

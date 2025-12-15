@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Download, Mail } from 'lucide-react';
+import { ArrowRight, Download, MessageCircle } from 'lucide-react';
 import { PROFILE } from '../constants';
 
 const Hero: React.FC = () => {
@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
           <h1 className="text-5xl md:text-7xl font-extrabold text-slate-50 tracking-tight leading-tight">
             Olá, eu sou <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-indigo-400">{PROFILE.name}</span>
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-slate-300 font-light max-w-3xl mx-auto">
             {PROFILE.role}
           </p>
@@ -37,22 +37,25 @@ const Hero: React.FC = () => {
               Ver Projetos
               <ArrowRight className="ml-2 -mr-1 h-5 w-5" />
             </a>
-            
+
             <a
-              href="#contato"
+              href="https://wa.me/5551981726896"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 border border-slate-700 text-base font-medium rounded-lg text-slate-300 bg-slate-800/50 hover:bg-slate-800 hover:text-white transition-colors md:text-lg backdrop-blur-sm"
             >
-              <Mail className="mr-2 -ml-1 h-5 w-5" />
+              <MessageCircle className="mr-2 -ml-1 h-5 w-5" />
               Entrar em Contato
             </a>
 
-            <button
-              onClick={() => alert('Link para download do CV seria acionado aqui.')}
+            <a
+              href="/Vinicius-Vibrich-Completo.pdf"
+              download
               className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-primary-200 bg-primary-900/20 hover:bg-primary-900/40 transition-colors md:text-lg"
             >
               <Download className="mr-2 -ml-1 h-5 w-5" />
               Baixar CV
-            </button>
+            </a>
           </div>
         </div>
       </div>
